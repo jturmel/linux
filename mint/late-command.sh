@@ -18,7 +18,13 @@ apt-get update
 apt-get install -y gh
 
 # Install Kitty terminal and Dracula theme
-apt-get install -y kitty
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+ln -sf $HOME/.local/kitty.app/bin/kitty $HOME/.local/bin/
+# Desktop integration
+cp $HOME/.local/kitty.app/share/applications/kitty.desktop $HOME/.local/share/applications/
+sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|" $HOME/.local/share/applications/kitty.desktop
+update-desktop-database $HOME/.local/share/applications
+
 mkdir -p $HOME/.config/kitty
 wget -O $HOME/.config/kitty/dracula.conf https://raw.githubusercontent.com/dracula/kitty/master/dracula.conf
 echo "include ./dracula.conf" >> $HOME/.config/kitty/kitty.conf
