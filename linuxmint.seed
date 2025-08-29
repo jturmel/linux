@@ -1,4 +1,5 @@
 # Preseed file for Linux Mint
+#
 # Language and country selection
 d-i debian-installer/language string en
 d-i debian-installer/country string US
@@ -13,14 +14,14 @@ d-i netcfg/get_domain string unassigned-domain
 d-i netcfg/dhcp_timeout string 60
 
 # Default user creation
-d-i passwd/user-fullname string JT
+d-i passwd/user-fullname string Josh Turmel
 d-i passwd/username string jt
 d-i passwd/user-password-crypted password $6$random_salt$password_hash
 d-i user-setup/allow-password-weak boolean true
 d-i user-setup/encrypt-home boolean false
 
 # Timezone
-d-i time/zone string America/New_York
+d-i time/zone string America/Chicago
 
 # Partitioning
 d-i partman-auto/method string lvm
