@@ -8,6 +8,9 @@ The initial configuration is for **Linux Mint**. It uses a preseed file (`mint/i
 
 - Google Chrome
 - JetBrains Toolbox
+- GitHub CLI
+- Kitty terminal (with Dracula theme)
+- Neovim (with LazyVim)
 
 ## Future Expansion
 
