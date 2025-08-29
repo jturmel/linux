@@ -32,3 +32,13 @@ echo "include ./dracula.conf" >> $HOME/.config/kitty/kitty.conf
 # Install Neovim
 wget -O $HOME/.local/bin/nvim https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x $HOME/.local/bin/nvim
+
+# Install LazyVim
+echo "Installing LazyVim..."
+# Remove existing Neovim config if it exists
+rm -rf $HOME/.config/nvim
+# Clone LazyVim starter template
+git clone https://github.com/LazyVim/starter $HOME/.config/nvim
+# Remove the .git directory from the cloned LazyVim config
+rm -rf $HOME/.config/nvim/.git
+echo "LazyVim installation complete. Launch nvim to finalize setup."
