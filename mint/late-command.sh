@@ -16,3 +16,9 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 apt-get update
 apt-get install -y gh
+
+# Install Kitty terminal and Dracula theme
+apt-get install -y kitty
+mkdir -p $HOME/.config/kitty
+wget -O $HOME/.config/kitty/dracula.conf https://raw.githubusercontent.com/dracula/kitty/master/dracula.conf
+echo "include ./dracula.conf" >> $HOME/.config/kitty/kitty.conf
