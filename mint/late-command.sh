@@ -29,6 +29,15 @@ mkdir -p $HOME/.config/kitty
 wget -O $HOME/.config/kitty/dracula.conf https://raw.githubusercontent.com/dracula/kitty/master/dracula.conf
 echo "include ./dracula.conf" >> $HOME/.config/kitty/kitty.conf
 
+# Set Cinnamon theme to Dracula
+mkdir -p $HOME/.themes
+wget https://github.com/dracula/gtk/archive/master.zip -O /tmp/dracula-gtk.zip
+unzip -o /tmp/dracula-gtk.zip -d $HOME/.themes/
+mv $HOME/.themes/gtk-master $HOME/.themes/Dracula
+gsettings set org.cinnamon.desktop.interface gtk-theme "Dracula"
+gsettings set org.cinnamon.desktop.wm.preferences theme "Dracula"
+rm /tmp/dracula-gtk.zip
+
 # Install Neovim
 wget -O $HOME/.local/bin/nvim https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x $HOME/.local/bin/nvim
