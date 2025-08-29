@@ -39,4 +39,4 @@ d-i grub-installer/only_debian boolean true
 d-i grub-installer/with_other_os boolean true
 
 # Finishing up
-d-i finish-install/reboot_in_progress note
+d-i finish-install/reboot_in_progress boolean false
