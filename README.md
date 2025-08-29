@@ -16,7 +16,7 @@ The initial configuration is for **Linux Mint**. It uses a preseed file (`mint/i
 
 To set up Linux Mint using this repository's preseed configuration, follow these steps during the installation process:
 
-1.  **Boot from Linux Mint Installation Media:** Start your computer from the Linux Mint live USB or DVD.
+1.  **Boot from [Linux Mint Installation Media](https://linuxmint.com/documentation/how_to_install.php):** Start your computer from the Linux Mint live USB or DVD.
 2.  **Access the Boot Menu:** When the GRUB boot menu appears, select the "Start Linux Mint" option (or similar) and press `e` to edit the boot parameters.
 3.  **Add Preseed URL:** Locate the line that typically starts with `linux /boot/vmlinuz-...` and append the following to the end of that line, ensuring there's a space before it:
     ```
