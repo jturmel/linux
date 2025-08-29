@@ -38,6 +38,11 @@ wget -O /tmp/discord.deb "https://discord.com/api/download?platform=linux&format
 apt install -y /tmp/discord.deb
 rm /tmp/discord.deb
 
+# Install Slack
+wget -O /tmp/slack.deb "https://downloads.slack-edge.com/linux_releases/slack-desktop-4.36.137-amd64.deb"
+apt install -y /tmp/slack.deb
+rm /tmp/slack.deb
+
 # Install LazyVim
 echo "Installing LazyVim..."
 # Remove existing Neovim config if it exists
