@@ -33,6 +33,11 @@ echo "include ./dracula.conf" >> $HOME/.config/kitty/kitty.conf
 wget -O $HOME/.local/bin/nvim https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x $HOME/.local/bin/nvim
 
+# Install Discord
+wget -O /tmp/discord.deb "https://discord.com/api/download?platform=linux&format=deb"
+apt install -y /tmp/discord.deb
+rm /tmp/discord.deb
+
 # Install LazyVim
 echo "Installing LazyVim..."
 # Remove existing Neovim config if it exists
