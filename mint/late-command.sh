@@ -23,6 +23,12 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 apt-get update
 apt-get install -y gh
 
+# Install Google Cloud CLI
+curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
+tar -xf google-cloud-cli-linux-x86_64.tar.gz
+./google-cloud-sdk/install.sh --quiet
+rm google-cloud-cli-linux-x86_64.tar.gz
+
 # Install Kitty terminal and Dracula theme
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 ln -sf $HOME/.local/kitty.app/bin/kitty $HOME/.local/bin/
