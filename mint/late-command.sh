@@ -61,3 +61,10 @@ git clone https://github.com/LazyVim/starter $HOME/.config/nvim
 # Remove the .git directory from the cloned LazyVim config
 rm -rf $HOME/.config/nvim/.git
 echo "LazyVim installation complete. Launch nvim to finalize setup."
+
+# Install Gemini CLI
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+nvm install 20
+npm install -g @google/gemini-cli
