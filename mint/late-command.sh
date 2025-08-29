@@ -4,6 +4,12 @@ sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
 apt-get update
 apt-get install -y google-chrome-stable
 
+# Install nvm and Node.js
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+nvm install 20
+
 # Install JetBrains Toolbox
 apt-get install -y libfuse2
 wget -O /tmp/jetbrains-toolbox.tar.gz "https://data.services.jetbrains.com/products/download?platform=linux&code=TBA"
@@ -63,8 +69,4 @@ rm -rf $HOME/.config/nvim/.git
 echo "LazyVim installation complete. Launch nvim to finalize setup."
 
 # Install Gemini CLI
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-nvm install 20
 npm install -g @google/gemini-cli
