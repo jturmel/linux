@@ -16,8 +16,8 @@ d-i netcfg/dhcp_timeout string 60
 # Default user creation
 d-i passwd/user-fullname string Josh Turmel
 d-i passwd/username string jt
-d-i passwd/user-password-crypted password $6$random_salt$password_hash
-d-i user-setup/allow-password-weak boolean true
+# d-i passwd/user-password-crypted password $6$random_salt$password_hash
+d-i user-setup/allow-password-weak boolean false
 d-i user-setup/encrypt-home boolean false
 
 # Timezone
