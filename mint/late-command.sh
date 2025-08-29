@@ -29,6 +29,10 @@ tar -xf google-cloud-cli-linux-x86_64.tar.gz
 ./google-cloud-sdk/install.sh --quiet
 rm google-cloud-cli-linux-x86_64.tar.gz
 
+# Install Google Cloud SQL Proxy
+wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O /usr/local/bin/cloud_sql_proxy
+chmod +x /usr/local/bin/cloud_sql_proxy
+
 # Install Kitty terminal and Dracula theme
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 ln -sf $HOME/.local/kitty.app/bin/kitty $HOME/.local/bin/
