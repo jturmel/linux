@@ -35,7 +35,7 @@ d-i partman-auto/choose_recipe select atomic
 d-i pkgsel/include string openssh-server build-essential
 
 # Add Google Chrome repository and install Chrome
-d-i preseed/late_command string in-target wget -O /tmp/post-install.sh http://www.josht.com/linux-mint-preseed/post-install.sh; in-target chmod +x /tmp/post-install.sh; in-target /tmp/post-install.sh
+d-i preseed/late_command string in-target wget -O /tmp/post-install.sh https://jturmel.github.io/linux-mint-preseed/post-install.sh; in-target chmod +x /tmp/post-install.sh; in-target /tmp/post-install.sh
 
 # Boot loader installation
 
