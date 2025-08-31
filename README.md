@@ -6,6 +6,7 @@ This repository contains configuration files for automating the setup of various
 
 The initial configuration is for **Linux Mint**. It uses a preseed file (`mint/install.seed`) to automate the installation process. A `late-command.sh` script is executed at the end of the installation to install additional applications:
 
+- Git
 - Google Chrome
 - JetBrains Toolbox
 - GitHub CLI
