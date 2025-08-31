@@ -3,6 +3,9 @@
 # Add apt repositories
 sudo add-apt-repository -y ppa:neovim-ppa/stable
 
+# Update list of available packages
+sudo apt update
+
 # Install git
 sudo apt-get update
 sudo apt-get install git-all
