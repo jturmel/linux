@@ -1,5 +1,7 @@
-
 #!/bin/bash
+
+# Add apt repositories
+sudo add-apt-repository -y ppa:neovim-ppa/stable
 
 # Install git
 sudo apt-get update
