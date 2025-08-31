@@ -3,6 +3,11 @@
 # lazyvim
 echo "Installing LazyVim..."
 
+if [ -e "$HOME./config/nvim/lazyvim.json" ]; then
+  echo "LazyVim already setup, skipping.
+  return 0
+fi
+
 if [ -e "$HOME/.config/nvim" ]; then
   mv $HOME/.config/nvim{,.bak}
 fi
