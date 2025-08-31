@@ -33,11 +33,7 @@ d-i partman-auto/choose_recipe select atomic
 # Package selection
 d-i pkgsel/include string openssh-server build-essential wget
 
-# Add Google Chrome repository and install Chrome
-d-i preseed/late_command string in-target wget -O /tmp/late-command.sh https://linux.jturmel.com/mint/late-command.sh; in-target chmod +x /tmp/late-command.sh; in-target /tmp/late-command.sh
-
 # Boot loader installation
-
 d-i grub-installer/only_debian boolean true
 d-i grub-installer/with_other_os boolean true
 
