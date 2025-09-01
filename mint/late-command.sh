@@ -2,40 +2,21 @@
 
 # Add apt repositories
 sudo add-apt-repository -y ppa:neovim-ppa/stable
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
+sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 
 # Update list of available packages
 sudo apt update
 
-# Install git
-sudo apt-get update
-sudo apt-get install git-all
-
-wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
-sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-apt-get update
-apt-get install -y google-chrome-stable
-
-# Install nvm and Node.js
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-nvm install 20
-
-# Install JetBrains Toolbox
-apt-get install -y libfuse2
-wget -O /tmp/jetbrains-toolbox.tar.gz "https://data.services.jetbrains.com/products/download?platform=linux&code=TBA"
-mkdir -p $HOME/.local/.share/JetBrains/Toolbox
-tar -xzf /tmp/jetbrains-toolbox.tar.gz -C $HOME/.local/.share/JetBrains/Toolbox --strip-components=1
-$HOME/.local/.share/JetBrains/Toolbox/jetbrains-toolbox
-
-# Install GitHub CLI
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-apt-get update
-apt-get install -y gh
-
-# Install neovim
-sudo apt install neovim
+curl -L https://jturmel.github.io/linux/mint/apps/git.sh | sh /dev/stdin
+curl -L https://jturmel.github.io/linux/mint/apps/chrome.sh | sh /dev/stdin
+curl -L https://jturmel.github.io/linux/mint/apps/nodejs.sh | sh /dev/stdin
+curl -L https://jturmel.github.io/linux/mint/apps/jetbrains-toolbox.sh | sh /dev/stdin
+curl -L https://jturmel.github.io/linux/mint/apps/github.sh | sh /dev/stdin
+curl -L https://jturmel.github.io/linux/mint/apps/neovim.sh | sh /dev/stdin
+curl -L https://jturmel.github.io/linux/mint/apps/discord.sh | sh /dev/stdin
 
 # Install Google Cloud CLI
 curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
@@ -68,14 +49,6 @@ gsettings set org.cinnamon.desktop.interface gtk-theme "Dracula"
 gsettings set org.cinnamon.desktop.wm.preferences theme "Dracula"
 rm /tmp/dracula-gtk.zip
 
-# Install Neovim
-wget -O $HOME/.local/bin/nvim https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x $HOME/.local/bin/nvim
-
-# Install Discord
-wget -O /tmp/discord.deb "https://discord.com/api/download?platform=linux&format=deb"
-apt install -y /tmp/discord.deb
-rm /tmp/discord.deb
 
 # Install Slack
 wget -O /tmp/slack.deb "https://downloads.slack-edge.com/linux_releases/slack-desktop-4.36.137-amd64.deb"
@@ -94,3 +67,7 @@ echo "LazyVim installation complete. Launch nvim to finalize setup."
 
 # Install Gemini CLI
 npm install -g @google/gemini-cli
+
+# Cleanup
+curl -L https://jturmel.github.io/linux/mint/cleanup.sh | sh /dev/stdin
+
