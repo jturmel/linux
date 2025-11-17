@@ -9,7 +9,6 @@ WORK_DIR=$(dirname "$0")
 . $WORK_DIR/install-google-chrome.sh
 . $WORK_DIR/install-jetbrains-toolbox.sh
 . $WORK_DIR/install-kitty.sh
-. $WORK_DIR/install-ohmyzsh.sh
 . $WORK_DIR/install-rsync.sh
 . $WORK_DIR/install-screamingfrogseospider.sh
 . $WORK_DIR/install-slack.sh
