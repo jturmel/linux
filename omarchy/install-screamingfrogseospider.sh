@@ -1,4 +1,4 @@
 #!/bin/sh
 
-yay -S --noconfirm --needed screamingfrogseospider
+yay -S --noconfirm --needed screamingfrogseospider-jre
 
