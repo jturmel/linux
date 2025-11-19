@@ -14,6 +14,7 @@ WORK_DIR=$(dirname "$0")
 . $WORK_DIR/install-rsync.sh
 . $WORK_DIR/install-screamingfrogseospider.sh
 . $WORK_DIR/install-slack.sh
+. $WORK_DIR/install-steam.sh
 . $WORK_DIR/install-stow.sh
 . $WORK_DIR/install-zsh.sh
 
