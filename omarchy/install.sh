@@ -5,6 +5,7 @@ WORK_DIR=$(dirname "$0")
 # Install additional packages
 . $WORK_DIR/install-ack.sh
 . $WORK_DIR/install-dracula-theme.sh
+. $WORK_DIR/install-fvm.sh
 . $WORK_DIR/install-gemini-cli.sh
 . $WORK_DIR/install-google-chrome.sh
 . $WORK_DIR/install-google-cloud.sh
