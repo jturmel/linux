@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-omarchy-install-steam
+WORK_DIR=$(dirname "$0")
+
+. $WORK_DIR/vendor/WOPR/install.sh
 
