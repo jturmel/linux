@@ -1524,10 +1524,6 @@ configure_shortcuts() {
   {
     echo ""
     echo "# Gaming Mode bindings - added by installation script"
-    echo "windowrulev2 = float, class:($terminal_class)"
-    echo "windowrulev2 = size 800 600, class:($terminal_class)"
-    echo "windowrulev2 = center, class:($terminal_class)"
-    echo "windowrulev2 = pin, class:($terminal_class)"
     if [ "$bind_style" = "bindd" ]; then
       echo "bindd = SUPER SHIFT, S, Steam Gaming Mode, exec, $terminal_cmd $SWITCH_BIN"
       echo "bindd = SUPER SHIFT, R, Exit Gaming Mode, exec, $RETURN_BIN"
