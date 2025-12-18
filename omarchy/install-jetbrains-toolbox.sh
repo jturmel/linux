@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 yay -S --noconfirm --needed jetbrains-toolbox
 

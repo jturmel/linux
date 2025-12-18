@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 WORK_DIR=$(dirname "$0")
 
