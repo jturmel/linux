@@ -7,6 +7,7 @@ WORK_DIR=$(dirname "$0")
 . $WORK_DIR/install-dracula-theme.sh
 . $WORK_DIR/install-dev-env-python.sh
 . $WORK_DIR/install-dev-env-go.sh
+. $WORK_DIR/install-dev-env-rust.sh
 . $WORK_DIR/install-fvm.sh
 . $WORK_DIR/install-gemini-cli.sh
 . $WORK_DIR/install-google-chrome.sh
