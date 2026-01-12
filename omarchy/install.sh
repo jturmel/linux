@@ -19,11 +19,11 @@ WORK_DIR=$(dirname "$0")
 . $WORK_DIR/install-rsync.sh
 . $WORK_DIR/install-screamingfrogseospider.sh
 . $WORK_DIR/install-slack.sh
-. $WORK_DIR/install-steam.sh
+#. $WORK_DIR/install-steam.sh
 . $WORK_DIR/install-stow.sh
 . $WORK_DIR/install-terraform.sh
 . $WORK_DIR/install-vesktop.sh
-. $WORK_DIR/install-waybar-basecamp-notifier.sh
+. $WORK_DIR/install-waybar-basecamp.sh
 . $WORK_DIR/install-yazi.sh
 . $WORK_DIR/install-zsh.sh
 
