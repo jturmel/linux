@@ -4,6 +4,7 @@ WORK_DIR=$(dirname "$0")
 
 # Install additional packages
 . $WORK_DIR/install-ack.sh
+. $WORK_DIR/install-bind-tools.sh
 . $WORK_DIR/install-dracula-theme.sh
 . $WORK_DIR/install-dev-env-python.sh
 . $WORK_DIR/install-dev-env-go.sh
