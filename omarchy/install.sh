@@ -9,6 +9,7 @@ WORK_DIR=$(dirname "$0")
 . $WORK_DIR/install-dev-env-python.sh
 . $WORK_DIR/install-dev-env-go.sh
 . $WORK_DIR/install-dev-env-rust.sh
+. $WORK_DIR/install-discord.sh
 . $WORK_DIR/install-fvm.sh
 . $WORK_DIR/install-gemini-cli.sh
 . $WORK_DIR/install-google-chrome.sh
@@ -23,7 +24,6 @@ WORK_DIR=$(dirname "$0")
 #. $WORK_DIR/install-steam.sh
 . $WORK_DIR/install-stow.sh
 . $WORK_DIR/install-terraform.sh
-. $WORK_DIR/install-vesktop.sh
 . $WORK_DIR/install-waybar-basecamp.sh
 . $WORK_DIR/install-yazi.sh
 . $WORK_DIR/install-zsh.sh
