@@ -16,6 +16,7 @@ WORK_DIR=$(dirname "$0")
 . $WORK_DIR/install-google-cloud.sh
 . $WORK_DIR/install-jetbrains-toolbox.sh
 . $WORK_DIR/install-kitty.sh
+. $WORK_DIR/install-local-by-flywheel.bin
 . $WORK_DIR/install-oh-my-posh.sh
 . $WORK_DIR/install-pix.sh
 . $WORK_DIR/install-rsync.sh
