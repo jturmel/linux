@@ -3,6 +3,7 @@
 WORK_DIR=$(dirname "$0")
 
 # Install additional packages
+. $WORK_DIR/install-ai-lmstudio.sh
 . $WORK_DIR/install-ack.sh
 . $WORK_DIR/install-bind-tools.sh
 . $WORK_DIR/install-dracula-theme.sh
@@ -24,6 +25,7 @@ WORK_DIR=$(dirname "$0")
 . $WORK_DIR/install-slack.sh
 #. $WORK_DIR/install-steam.sh
 . $WORK_DIR/install-stow.sh
+. $WORK_DIR/install-tailscale.sh
 . $WORK_DIR/install-terraform.sh
 . $WORK_DIR/install-waybar-basecamp.sh
 . $WORK_DIR/install-yazi.sh
