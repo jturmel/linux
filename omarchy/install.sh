@@ -3,6 +3,7 @@
 WORK_DIR=$(dirname "$0")
 
 # Install additional packages
+. $WORK_DIR/install-ai-codex.sh
 . $WORK_DIR/install-ai-lmstudio.sh
 . $WORK_DIR/install-ack.sh
 . $WORK_DIR/install-bind-tools.sh
