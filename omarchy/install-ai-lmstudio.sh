@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-omarchy-pkg-add lmstudio
+yay -S --noconfirm --needed lmstudio-bin
 
