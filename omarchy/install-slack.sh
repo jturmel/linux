@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Register Slack for installation
 
-yay -S --noconfirm --needed slack-desktop
-
+register_yay slack-desktop

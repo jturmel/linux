@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Register Yazi for installation
 
-yay -S --noconfirm --needed yazi
-
+register_yay yazi

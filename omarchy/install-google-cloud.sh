@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
+# Register Google Cloud SDK for installation
 
-yay -S --noconfirm google-cloud-cli
-yay -S --noconfirm google-cloud-cli-bq
-yay -S --noconfirm google-cloud-gsutil
-
+register_yay google-cloud-cli google-cloud-cli-bq google-cloud-gsutil

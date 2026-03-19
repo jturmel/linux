@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Remove Omarchy Chromium
 
-yay -R omarchy-chromium
-
+register_remove_cmd "yay -R --noconfirm omarchy-chromium || true"

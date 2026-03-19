@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Register JetBrains Toolbox for installation
 
-yay -S --noconfirm --needed jetbrains-toolbox
-
+register_yay jetbrains-toolbox

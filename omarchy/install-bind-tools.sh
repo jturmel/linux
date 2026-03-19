@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Register bind-tools for installation
 
-sudo pacman -S bind-tools
-
+register_pacman bind-tools

@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
+# Register all configuration - sourced by setup.sh
+# This file registers config hooks without executing them
 
-WORK_DIR=$(dirname "$0")
+WORK_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-. $WORK_DIR/config-docker-containers.sh
-
+# Configure Docker containers
+# shellcheck source=config-docker-containers.sh
+source "$WORK_DIR/config-docker-containers.sh"

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Remove HEY webapp
 
-omarchy-webapp-remove HEY
-
+register_remove_cmd "omarchy-webapp-remove HEY || true"

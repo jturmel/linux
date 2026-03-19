@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Register ack for installation
 
-yay -S --noconfirm --needed ack
-
+register_yay ack

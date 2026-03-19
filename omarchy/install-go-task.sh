@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Register go-task for installation
 
-sudo pacman -S go-task
-
+register_pacman go-task

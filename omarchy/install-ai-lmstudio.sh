@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Register LM Studio for installation
 
-yay -S --noconfirm --needed lmstudio-bin
-
+register_yay lmstudio-bin

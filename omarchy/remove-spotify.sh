@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Remove Spotify
 
-yay -R spotify
-
+register_remove_cmd "yay -R --noconfirm spotify || true"

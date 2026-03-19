@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Register OpenAI Codex for installation
 
-sudo pacman -S openai-codex
-
+register_pacman openai-codex

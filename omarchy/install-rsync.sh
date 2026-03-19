@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Register rsync for installation
 
-yay -S --noconfirm --needed rsync
-
+register_yay rsync

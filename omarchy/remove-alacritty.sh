@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+# Remove alacritty package
 
-yay -R alacritty
+register_remove_cmd "yay -R --noconfirm alacritty || true"

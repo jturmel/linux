@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Remove Signal Desktop
 
-yay -R signal-desktop
-
+register_remove_cmd "yay -R --noconfirm signal-desktop || true"

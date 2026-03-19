@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Register Screaming Frog SEO Spider for installation
 
-yay -S --noconfirm --needed screamingfrogseospider-jre
-
+register_yay screamingfrogseospider-jre

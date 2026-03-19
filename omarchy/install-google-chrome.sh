@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Register Google Chrome for installation
 
-yay -S --noconfirm google-chrome
-
+register_yay google-chrome

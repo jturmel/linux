@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Register Gemini CLI for installation
 
-yay -S --noconfirm --needed gemini-cli
-
+register_yay gemini-cli

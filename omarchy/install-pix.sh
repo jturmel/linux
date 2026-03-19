@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Register Pix for installation
 
-yay -S --noconfirm --needed pix
-
+register_yay pix

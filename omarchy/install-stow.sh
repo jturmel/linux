@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Register GNU Stow for installation
 
-yay -S --noconfirm --needed stow
-
+register_yay stow

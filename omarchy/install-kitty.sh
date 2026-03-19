@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
+# Register Kitty terminal for installation
+# Uses post-install hook to set default terminal
 
-# Install using the omarchy cmd so that it
-#  sets the default terminal as well
-omarchy-install-terminal kitty
-
+register_post_install_hook "omarchy-install-terminal kitty"

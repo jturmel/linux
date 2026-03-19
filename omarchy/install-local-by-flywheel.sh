@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Register Local by Flywheel for installation
 
-yay -S --noconfirm --needed local-by-flywheel-bin
-
+register_yay local-by-flywheel-bin

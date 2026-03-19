@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Register Oh My Posh for installation
 
-yay -S --noconfirm --needed oh-my-posh
-
+register_yay oh-my-posh

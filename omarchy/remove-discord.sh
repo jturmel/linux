@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Remove Discord webapp
 
-omarchy-webapp-remove Discord
-
+register_remove_cmd "omarchy-webapp-remove Discord || true"
