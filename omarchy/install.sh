@@ -5,6 +5,10 @@
 WORK_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Install additional packages
+# shellcheck source=install-ai-antigravity-cli.sh
+source "$WORK_DIR/install-ai-antigravity-cli.sh"
+# shellcheck source=install-ai-antigravity-ide.sh
+source "$WORK_DIR/install-ai-antigravity-ide.sh"
 # shellcheck source=install-ai-codex.sh
 source "$WORK_DIR/install-ai-codex.sh"
 # shellcheck source=install-ai-lmstudio.sh
