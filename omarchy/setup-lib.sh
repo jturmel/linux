@@ -222,9 +222,9 @@ run_install_stage() {
     if [[ ${#PACMAN_PACKAGES[@]} -gt 0 ]]; then
         log_info "Installing ${#PACMAN_PACKAGES[@]} pacman package(s)..."
         if is_dry_run; then
-            log_info "[DRY-RUN] Would run: sudo pacman -S --needed --noconfirm ${PACMAN_PACKAGES[*]}"
+            log_info "[DRY-RUN] Would run: omarchy pkg add ${PACMAN_PACKAGES[*]}"
         else
-            if sudo pacman -S --needed --noconfirm "${PACMAN_PACKAGES[@]}"; then
+            if omarchy pkg add "${PACMAN_PACKAGES[@]}"; then
                 record_completed "pacman packages: ${PACMAN_PACKAGES[*]}"
             else
                 log_error "Failed to install some pacman packages"
@@ -238,9 +238,9 @@ run_install_stage() {
         if command -v yay &>/dev/null; then
             log_info "Installing ${#YAY_PACKAGES[@]} yay package(s)..."
             if is_dry_run; then
-                log_info "[DRY-RUN] Would run: yay -S --needed --noconfirm ${YAY_PACKAGES[*]}"
+                log_info "[DRY-RUN] Would run: omarchy pkg aur add ${YAY_PACKAGES[*]}"
             else
-                if yay -S --needed --noconfirm "${YAY_PACKAGES[@]}"; then
+                if omarchy pkg aur add "${YAY_PACKAGES[@]}"; then
                     record_completed "yay packages: ${YAY_PACKAGES[*]}"
                 else
                     log_error "Failed to install some yay packages"

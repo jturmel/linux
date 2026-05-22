@@ -7,8 +7,6 @@ register_post_config_hook '
     local containers=(
         "blackd|ceeveeya/blackd:latest|-p 45484:45484 --restart unless-stopped"
         "kroki|yuzutech/kroki:latest|-p 7105:8000 --restart unless-stopped"
-        "crawl4ai|unclecode/crawl4ai:latest|-p 11235:11235 --restart unless-stopped --shm-size=1g"
-        "lightpanda|lightpanda/browser:latest|-p 9222:9222 --restart unless-stopped"
     )
 
     # Check if Docker is available

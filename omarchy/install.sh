@@ -3,6 +3,55 @@
 # This file registers packages and hooks without executing them
 
 WORK_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DIRECT_RUN=false
+
+if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
+    DIRECT_RUN=true
+fi
+
+if ! declare -F register_pacman &>/dev/null; then
+    # shellcheck source=setup-lib.sh
+    source "$WORK_DIR/setup-lib.sh"
+fi
+
+if [[ "$DIRECT_RUN" == true ]]; then
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            --dry-run)
+                DRY_RUN=true
+                shift
+                ;;
+            --verbose|-v)
+                VERBOSE=true
+                shift
+                ;;
+            --help|-h)
+                echo "Usage: $(basename "$0") [OPTIONS]"
+                echo ""
+                echo "Options:"
+                echo "  --dry-run     Show what would be installed without making changes"
+                echo "  --verbose     Show detailed debug output"
+                echo "  --help        Show this help message"
+                echo ""
+                echo "Runs only the Omarchy install stage. Use setup.sh for the full setup flow."
+                exit 0
+                ;;
+            *)
+                echo "Unknown option: $1"
+                echo "Use --help for usage information"
+                exit 1
+                ;;
+        esac
+    done
+
+    if is_dry_run; then
+        log_info "=== DRY RUN MODE ==="
+        log_info "No changes will be made to your system"
+        log_info ""
+    fi
+
+    run_preflight
+fi
 
 # Install additional packages
 # shellcheck source=install-ai-antigravity-cli.sh
@@ -29,8 +78,6 @@ source "$WORK_DIR/install-dev-env-rust.sh"
 source "$WORK_DIR/install-discord.sh"
 # shellcheck source=install-fvm.sh
 source "$WORK_DIR/install-fvm.sh"
-# shellcheck source=install-gemini-cli.sh
-source "$WORK_DIR/install-gemini-cli.sh"
 # shellcheck source=install-google-chrome.sh
 source "$WORK_DIR/install-google-chrome.sh"
 # shellcheck source=install-google-cloud.sh
@@ -65,3 +112,9 @@ source "$WORK_DIR/install-yazi.sh"
 source "$WORK_DIR/install-zsh.sh"
 # shellcheck source=install-go-task.sh
 source "$WORK_DIR/install-go-task.sh"
+
+if [[ "$DIRECT_RUN" == true ]]; then
+    run_install_stage
+    print_recap
+    exit $SETUP_FAILED
+fi

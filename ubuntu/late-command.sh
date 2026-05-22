@@ -16,7 +16,6 @@ curl -L https://jturmel.github.io/linux/mint/apps/git.sh | sh /dev/stdin
 curl -L https://jturmel.github.io/linux/mint/apps/nodejs.sh | sh /dev/stdin
 curl -L https://jturmel.github.io/linux/mint/apps/gcloud-cli.sh | sh /dev/stdin
 curl -L https://jturmel.github.io/linux/mint/apps/google-cloud-sql-proxy.sh | sh /dev/stdin
-curl -L https://jturmel.github.io/linux/mint/apps/gemini-cli.sh | sh /dev/stdin
 
 # apps
 curl -L https://jturmel.github.io/linux/mint/apps/chrome.sh | sh /dev/stdin
@@ -33,4 +32,3 @@ curl -L https://jturmel.github.io/linux/mint/config/lazyvim.sh | sh /dev/stdin
 
 # Cleanup
 curl -L https://jturmel.github.io/linux/mint/cleanup.sh | sh /dev/stdin
-
