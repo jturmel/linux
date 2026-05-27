@@ -104,6 +104,8 @@ source "$WORK_DIR/install-stow.sh"
 source "$WORK_DIR/install-tailscale.sh"
 # shellcheck source=install-terraform.sh
 source "$WORK_DIR/install-terraform.sh"
+# shellcheck source=install-tigervnc.sh
+source "$WORK_DIR/install-tigervnc.sh"
 # shellcheck source=install-waybar-basecamp.sh
 source "$WORK_DIR/install-waybar-basecamp.sh"
 # shellcheck source=install-yazi.sh
